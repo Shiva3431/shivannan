@@ -1,0 +1,42 @@
+<html>
+<head>
+<title> login </title>
+</head>
+<body style="background-color:#f7c3c3;">
+ <center>
+<h3> <i> WELCOME </i> </h3>
+<h4> LOGIN </h4>
+
+<form>
+  <p>
+    <label for="username">Username</label>
+    <input type="text" id="UN" name="username" required>
+  </p>
+
+  <p>
+    <label for="email">E-mail</label>
+    <input type="email" id="EM" name="email" required>
+  </p>
+
+  <p>
+    <label for="password">Password</label>
+    <input type="password" id="PS" name="password" required>
+  </p>
+
+  <button onclick="myFunction()">Submit</button><br>
+<p><script>function myFunction()
+{
+let username=document.getElementById("UN").value;
+let password=document.getElementById("PS").value;
+let uname=localStorage.getItem("username");
+let pass=localStorage.getItem("password");
+if(username ==uname && password==pass)
+{alert("you are valid");
+window.location.href="homepage.html";}
+else{alert("intruder");}
+}
+</script><a href="homepage.html" target="_blank">Homepage</a>
+</form>
+</body>
+</html>
+
